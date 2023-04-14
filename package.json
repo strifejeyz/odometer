@@ -3,17 +3,25 @@
   "version": "1.0.0",
   "description": "A simple js odometer for animating numbers.",
   "main": "simple-odometer",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "animating numbers",
     "simple odometer",
     "odometer"
   ],
+  "files": [
+    "src/css/odometer.css",
+    "src/js/odometer.js"
+  ],
   "author": "Jesse Strife",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strifejeyz/odometer.git"
   },
-  "devDependencies": {
-  }
+  "bugs": {
+    "url": "https://github.com/strifejeyz/odometer/issues"
+  },
+  "homepage": "https://github.com/strifejeyz/odometer#readme"
 }
