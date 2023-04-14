@@ -1,0 +1,19 @@
+{
+  "name": "simple-odometer",
+  "version": "1.0.0",
+  "description": "A simple js odometer for animating numbers.",
+  "main": "simple-odometer",
+  "scripts": {
+  },
+  "keywords": [
+    "animating numbers",
+    "simple odometer",
+    "odometer"
+  ],
+  "author": "Jesse Strife",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
