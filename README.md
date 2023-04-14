@@ -3,33 +3,45 @@
 
 ## How to use:
 
-### Install via npm
+### Install via npm (for JS frameworks)
 
 `npm install simple-odometer`  
 
+`import "simple-odometer/src/js/odometer.js";`
+
+`import "simple-odometer/src/css/odometer.css";`
+
+### Otherwise, just link them
+ `<link rel="stylesheet" href="simple-odometer/src/js/odometer.js">`
+ 
+ `<script rel="stylesheet" href="simple-odometer/src/js/odometer.js"></script>`
 
 
 ### Your HTML
 
-`</span><span class="odometer">0</span>`
+    <span class="odometer">0</span>
+    <button id='animate'>Animate</button>
 
-`<button id='animate'>Animate</button>`
 
+### Configuration when page is loads/when component is mounted
 
-### Configuration
-
-`window.odometerOptions = {
-    format:   '(,ddd).dd',
+<pre>
+window.odometerOptions = {
+    format: '(,ddd).dd',
     duration: 2000,
-};
-`
+}
+</pre>
 
-### Then modify the innerHTML:
+### Then update your config like so:
 
-`const odometer = document.querySelector('.odometer');`
- 
-`const button = document.querySelector('#animate')`
-
-`button.onclick = () => {
-   odometer.innerHTML = 2000;
-}`
+<pre>
+const button = document.querySelector('#animate');
+button.onclick = () => {
+    const odometer = document.querySelector('.odometer');
+    const config = new window.Odometer({
+        el: odometer, // pass the element ref
+        value: odometer.value // old value
+    });
+    config.update(Math.random() * 1000); // new value
+}
+</pre>
