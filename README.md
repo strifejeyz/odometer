@@ -1,7 +1,7 @@
 # JS Odometer 
 ## A simple js odometer for animating numbers.
 
-## How to use:
+## How to use it:
 
 ### Install via npm (for JS frameworks)
 
@@ -23,7 +23,7 @@
     <button id='animate'>Animate</button>
 
 
-### Configuration when page is loads/when component is mounted
+### Configuration
 
 <pre>
 window.odometerOptions = {
@@ -32,7 +32,7 @@ window.odometerOptions = {
 }
 </pre>
 
-### Then update your config like so:
+### Your event handler:
 
 <pre>
 const button = document.querySelector('#animate');
