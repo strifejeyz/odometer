@@ -12,7 +12,7 @@
 `import "simple-odometer/src/css/odometer.css";`
 
 ### Otherwise, just link them
- `<link rel="stylesheet" href="simple-odometer/src/js/odometer.js">`
+ `<link rel="stylesheet" href="simple-odometer/src/js/odometer.css">`
  
  `<script rel="stylesheet" href="simple-odometer/src/js/odometer.js"></script>`
 
