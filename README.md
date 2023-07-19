@@ -1,5 +1,6 @@
 # JS Odometer 
 ## A simple js odometer for animating numbers.
+## See src/index.html for demo
 
 ### Install via npm
 
@@ -12,7 +13,7 @@
 ### Or just link them
  `<link rel="stylesheet" href="simple-odometer/src/js/odometer.css">`
  
- `<script rel="stylesheet" href="simple-odometer/src/js/odometer.js"></script>`
+ `<script src="simple-odometer/src/js/odometer.js"></script>`
 
 
 ### Your HTML
@@ -35,13 +36,19 @@ window.odometerOptions = {
 <pre>
 const button = document.querySelector('#animate');
 button.onclick = () => {
-    const odometer = document.querySelector('#odometer');
-    const config = new window.Odometer({
-        el: odometer, // pass the element ref
-        value: odometer.innerHTML // old value
+    // Target the element to animate
+    const target_elem = document.querySelector('#odometer');
+
+    // Create na instance
+    const OdoInstance = new Odometer({
+        // pass the element ref
+        el: target_elem,
+
+        // Old value to animate from
+        value: target_elem.innerHTML
     });
-    
-    // Finally, give it a new value
-    config.update(Math.random() * 1000); // new value
+
+    // Finally, give it a new value to animate to
+    OdoInstance.update(Math.random() * 1000); // new value
 }
 </pre>

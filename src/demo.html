@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/simple-odometer/src/css/odometer.css"/>
+    <script src="node_modules/simple-odometer/src/js/odometer.js"></script>
+</head>
+<body>
+
+<span id="odometer">0</span>
+<button id='animate'>Animate</button>
+
+<script>
+    window.odometerOptions = {
+        format: '(,ddd).dd',
+        duration: 2000,
+    }
+
+    const button = document.querySelector('#animate');
+    button.onclick = () => {
+        // Target the element to animate
+        const target_elem = document.querySelector('#odometer');
+
+        // Create na instance
+        const OdoInstance = new Odometer({
+            // pass the element ref
+            el: target_elem,
+
+            // pass the old value
+            value: target_elem.innerHTML
+        });
+
+        // Finally, give it a new value
+        OdoInstance.update(Math.random() * 1000); // new value
+    }
+</script>
+
+</body>
+</html>
