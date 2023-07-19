@@ -1,6 +1,6 @@
 {
   "name": "simple-odometer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple js odometer for animating numbers.",
   "main": "simple-odometer",
   "scripts": {},
